@@ -19,6 +19,7 @@
   width: 3237px;
   padding-bottom: 20px;
   .container__item {
+    scroll-snap-align: start;
     position: relative;
     width: 268px;
     height: 391px;
@@ -111,6 +112,7 @@
 .testimonials__swiper {
   overflow-x: scroll;
   overflow-y: hidden;
+  scroll-snap-type: x mandatory;
 
   &::-webkit-scrollbar {
     background: #f5f7f6;
