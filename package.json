@@ -8,5 +8,13 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h1stil/online-zoo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/h1stil/online-zoo/issues"
+  },
+  "homepage": "https://github.com/h1stil/online-zoo#readme",
   "description": ""
 }
