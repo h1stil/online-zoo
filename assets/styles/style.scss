@@ -1,0 +1,19 @@
+@import "abstract/constants";
+@import "base/base";
+@import "base/buttons";
+
+// Layouts
+@import "layouts/wrapper";
+@import "layouts/header_main";
+@import "layouts/backstage";
+@import "layouts/animals";
+@import "layouts/friends";
+@import "layouts/testimonials";
+@import "layouts/footer";
+
+// Components
+@import "components/_promo_main";
+@import "components/friends";
+@import "components/flowers";
+@import "components/range";
+@import "components/burger";

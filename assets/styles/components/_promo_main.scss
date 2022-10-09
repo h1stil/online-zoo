@@ -1,0 +1,129 @@
+.promo {
+  position: relative;
+  background: #283035 url(../../assets/images/promopanda.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  .header {
+    position: relative;
+    z-index: 5;
+  }
+  .content_ellipse {
+    position: absolute;
+    top: 12%;
+    right: 20%;
+  }
+}
+
+.content_text {
+  max-width: 43%;
+  font-weight: 700;
+  font-size: 106.5px;
+  line-height: 75%;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 86px 0 0 auto;
+  position: relative;
+  z-index: 4;
+  p {
+    color: #fff;
+    margin: 0;
+  }
+  .text_yellow {
+    color: $color-yellow;
+  }
+  .button {
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+}
+
+// Donate
+
+.promo__donate {
+  background: #283035 no-repeat 50% 50%;
+  background-image: url(../../assets/images/panda_bg.png);
+  background-size: cover;
+  height: 470px;
+}
+
+// MEDIA
+
+@media screen and (max-width: 1200px) {
+  .promo {
+    height: 584px;
+    .content_ellipse {
+      top: 12%;
+      right: 17%;
+      img {
+        width: 367px;
+      }
+    }
+  }
+
+  .content_text {
+    font-size: 85px;
+    margin: 40px 51px 0 auto;
+    .button {
+      margin-top: 40px;
+      margin-bottom: 47px;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) and (min-width: 800px) {
+  .content_text {
+    max-width: 36%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .promo {
+    height: 339px;
+    .content_ellipse {
+      top: 3%;
+      right: 9%;
+      img {
+        width: 237px;
+      }
+    }
+  }
+
+  .content_text {
+    font-size: 54.3px;
+    margin: 34px 0px 0 auto;
+    padding-top: 40px;
+    .button {
+      display: block;
+      margin: -7px 0px 0px -128%;
+    }
+  }
+
+  .promo__donate {
+    height: 373px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .promo {
+    height: 221px;
+    .content_ellipse {
+      right: 10%;
+      top: 19%;
+      img {
+        width: 119px;
+      }
+    }
+  }
+  .content_text {
+    width: 130px;
+    p {
+      font-size: 28px;
+      line-height: 75%;
+    }
+    .button {
+      margin: 100px 0 0 -130%;
+    }
+  }
+  .promo__donate {
+    height: 221px;
+  }
+}

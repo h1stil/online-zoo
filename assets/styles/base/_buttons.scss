@@ -1,0 +1,29 @@
+.button {
+  background: $color-orange;
+  width: 298px;
+  height: 54px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    background: $color-orange-hover;
+  }
+
+  &:active {
+    background: $color-green;
+  }
+}
+
+.button_default {
+  border-radius: 25px;
+}
+
+.feedback_default {
+  border-radius: 5px;
+}

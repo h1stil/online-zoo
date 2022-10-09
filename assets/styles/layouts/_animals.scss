@@ -1,0 +1,218 @@
+.animals {
+  button {
+    display: block;
+    margin: 80px auto 100px;
+  }
+}
+
+.animals__container {
+  width: 1160px;
+  overflow: hidden;
+  margin-top: 180px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px 27px;
+}
+
+.animals__card {
+  width: 366px;
+  height: 426px;
+  border-radius: 5px;
+  border: 1px solid $color-orange;
+  transition: all 0.4s ease-in-out;
+  box-sizing: border-box;
+  img {
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &:hover {
+    transform: scale(1);
+    .card_text {
+      position: absolute;
+      bottom: 40%;
+      transform: translate(0%, -50%);
+      width: 92.5%;
+      background-color: rgba(0, 0, 0, 0.685);
+      transition: all 0.4s ease-in-out;
+      color: #fff;
+    }
+  }
+
+  .card_image {
+    border-radius: 5px 5px 0 0;
+  }
+  .card_text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5px 0px 16px;
+    position: relative;
+    transition: all 0.3s;
+    padding: 8px 16px;
+    .card_title {
+      h5 {
+        margin: 0;
+      }
+      p {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 120%;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.card_icon {
+  position: relative;
+  .bamboo {
+    position: absolute;
+  }
+  .fish {
+    position: absolute;
+    left: 5px;
+  }
+}
+
+// Swiper
+
+.animals__swiper {
+  position: relative;
+  .arrow_left {
+    position: absolute;
+    top: 400px;
+    left: -82px;
+    :hover {
+      fill: #e47209;
+      transition: all 0.3s;
+    }
+    :active {
+      fill: $color-green;
+      transition: all 0.1s;
+    }
+  }
+  .arrow_right {
+    position: absolute;
+    top: 400px;
+    right: -82px;
+    transition: all 0.3s;
+    :hover {
+      fill: #e47209;
+      transition: all 0.3s;
+    }
+    :active {
+      fill: $color-green;
+      transition: all 0.1s;
+    }
+  }
+}
+
+//MEDIA
+
+@media screen and (max-width: 1200px) {
+  .animals {
+    button {
+      margin: 80px auto 140px;
+    }
+  }
+  .animals__container {
+    margin-top: 140px;
+    grid-gap: 90px 27px;
+    width: 940px;
+  }
+  .animals__card {
+    width: 294px;
+    height: 354px;
+    .card_image {
+      width: 294px;
+      height: 294px;
+    }
+  }
+  .animals__swiper {
+    .arrow_left {
+      left: 35%;
+      top: 370px;
+    }
+    .arrow_right {
+      right: 34%;
+      top: 370px;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .animals__container {
+    grid-template-columns: 1fr 1fr;
+    margin: 80px auto 0 auto;
+    width: 600px;
+  }
+  .animals__card {
+    width: 285px;
+    height: 332px;
+    .card_image {
+      width: 283px;
+      height: 285px;
+    }
+    .card_text {
+      padding: 0 10px;
+      .card_title {
+        h5 {
+          font-size: 12.47px;
+        }
+        p {
+          font-size: 12.47px;
+        }
+      }
+    }
+  }
+  .animals {
+    button {
+      margin: 60px auto 100px;
+    }
+  }
+  .animals__swiper {
+    .arrow_left {
+      left: 39%;
+      top: 340px;
+    }
+    .arrow_right {
+      right: 36%;
+      top: 340px;
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .animals__container {
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 320px;
+  }
+
+  .animals__card {
+    margin: 0 auto;
+  }
+
+  .animals__swiper {
+    .arrow_left {
+      display: none;
+    }
+    .arrow_right {
+      display: none;
+    }
+  }
+
+  .animals {
+    button {
+      margin: 20px auto 60px;
+    }
+  }
+}
