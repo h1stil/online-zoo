@@ -273,14 +273,16 @@ h5 {
   margin: 80px auto 100px;
 }
 
-.animals__container {
+.animals__container,
+.animals__container_left,
+.animals__container_right {
+  margin: 180px 10px 0;
   width: 1160px;
-  overflow: hidden;
-  margin-top: 180px;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 15px 27px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+  height: 872px;
 }
 
 .animals__card {
@@ -327,7 +329,7 @@ h5 {
 .animals__card .card_text .card_title p {
   font-style: normal;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 120%;
   margin: 0;
 }
@@ -345,43 +347,168 @@ h5 {
 
 .animals__swiper {
   position: relative;
+  width: 350%;
+  display: flex;
+  left: -1189px;
 }
-.animals__swiper .arrow_left {
+
+.animals .wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.arrow {
+  cursor: pointer;
+  width: 62px;
+  height: 62px;
+  background-color: #fe9013;
+  border-radius: 50%;
+  border: none;
+}
+
+.arrow_left {
   position: absolute;
-  top: 400px;
-  left: -82px;
+  bottom: 535px;
+  left: 125px;
 }
-.animals__swiper .arrow_left :hover {
+.arrow_left :hover {
   fill: #e47209;
   transition: all 0.3s;
 }
-.animals__swiper .arrow_left :active {
-  fill: #4b9200;
-  transition: all 0.1s;
-}
-.animals__swiper .arrow_right {
-  position: absolute;
-  top: 400px;
-  right: -82px;
-  transition: all 0.3s;
-}
-.animals__swiper .arrow_right :hover {
-  fill: #e47209;
-  transition: all 0.3s;
-}
-.animals__swiper .arrow_right :active {
+.arrow_left :active {
   fill: #4b9200;
   transition: all 0.1s;
 }
 
-@media screen and (max-width: 1200px) {
-  .animals button {
-    margin: 80px auto 140px;
+.arrow_right {
+  position: absolute;
+  bottom: 535px;
+  right: 125px;
+  transition: all 0.3s;
+}
+.arrow_right :hover {
+  fill: #e47209;
+  transition: all 0.3s;
+}
+.arrow_right :active {
+  fill: #4b9200;
+  transition: all 0.1s;
+}
+
+@keyframes move-left_desctop {
+  from {
+    left: -1189px;
   }
-  .animals__container {
+  to {
+    left: -9px;
+  }
+}
+.transition-left_desctop {
+  animation-name: move-left_desctop;
+  animation-duration: 1.5s;
+}
+
+@keyframes move-left_normal {
+  from {
+    left: -1150px;
+  }
+  to {
+    left: 100px;
+  }
+}
+.transition-left_normal {
+  animation-name: move-left_normal;
+  animation-duration: 1.5s;
+}
+
+@keyframes move-left_small {
+  from {
+    left: -1105px;
+  }
+  to {
+    left: -9px;
+  }
+}
+.transition-left_small {
+  animation-name: move-left_small;
+  animation-duration: 1.5s;
+}
+
+@keyframes move-left_mobile {
+  from {
+    left: -121%;
+  }
+  to {
+    left: 0%;
+  }
+}
+.transition-left_mobile {
+  animation-name: move-left_mobile;
+  animation-duration: 1.5s;
+}
+
+@keyframes move-right_desctop {
+  from {
+    left: -1189px;
+  }
+  to {
+    left: -2370px;
+  }
+}
+.transition-right_desctop {
+  animation-name: move-right_desctop;
+  animation-duration: 1.5s;
+}
+
+@keyframes move-right_normal {
+  from {
+    left: -1150px;
+  }
+  to {
+    left: -2250px;
+  }
+}
+.transition-right_normal {
+  animation-name: move-right_normal;
+  animation-duration: 1.5s;
+}
+
+@keyframes move-right_small {
+  from {
+    left: -1105px;
+  }
+  to {
+    left: -2202px;
+  }
+}
+.transition-right_small {
+  animation-name: move-right_small;
+  animation-duration: 1.5s;
+}
+
+@keyframes move-right_mobile {
+  from {
+    left: -121%;
+  }
+  to {
+    left: -243%;
+  }
+}
+.transition-right_mobile {
+  animation-name: move-right_mobile;
+  animation-duration: 1.5s;
+}
+
+@media screen and (max-width: 1550px) {
+  .animals__swiper {
+    left: -1050px;
+  }
+  .animals__container,
+.animals__container_left,
+.animals__container_right {
     margin-top: 140px;
     grid-gap: 90px 27px;
-    width: 940px;
+    height: auto;
   }
   .animals__card {
     width: 294px;
@@ -391,20 +518,40 @@ h5 {
     width: 294px;
     height: 294px;
   }
-  .animals__swiper .arrow_left {
+  .arrow_left {
     left: 35%;
-    top: 370px;
+    top: 57%;
   }
-  .animals__swiper .arrow_right {
+  .arrow_right {
     right: 34%;
-    top: 370px;
+    top: 57%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .animals button {
+    margin: 80px auto 140px;
+  }
+  .animals__swiper {
+    left: -1105px;
+  }
+  .arrow_left {
+    top: 55%;
+  }
+  .arrow_right {
+    top: 55%;
+    right: 36%;
   }
 }
 @media screen and (max-width: 980px) {
   .animals__container {
-    grid-template-columns: 1fr 1fr;
+    max-width: 640px;
     margin: 80px auto 0 auto;
-    width: 600px;
+  }
+  .animals__container_left,
+.animals__container_right {
+    max-width: 640px;
+    margin-top: 80px;
+    grid-gap: 90px 27px;
   }
   .animals__card {
     width: 285px;
@@ -426,32 +573,50 @@ h5 {
   .animals button {
     margin: 60px auto 100px;
   }
-  .animals__swiper .arrow_left {
-    left: 39%;
-    top: 340px;
+  .arrow_left {
+    left: 38%;
+    top: 54%;
   }
-  .animals__swiper .arrow_right {
-    right: 36%;
-    top: 340px;
+  .arrow_right {
+    right: 38%;
+    top: 54%;
+  }
+  .animals__swiper {
+    left: -121%;
+  }
+  .animals__card:nth-of-type(3) {
+    display: none;
+  }
+  .animals__card:nth-of-type(6) {
+    display: none;
   }
 }
 @media screen and (max-width: 630px) {
+  .animals__swiper {
+    position: unset;
+    width: 100%;
+  }
   .animals__container {
     margin: 40px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 320px;
     gap: 20px;
-    width: 320px;
+    height: auto;
+  }
+  .animals__container_left,
+.animals__container_right {
+    display: none;
   }
   .animals__card {
     margin: 0 auto;
   }
-  .animals__swiper .arrow_left {
-    display: none;
+  .arrow_left {
+    visibility: hidden;
   }
-  .animals__swiper .arrow_right {
-    display: none;
+  .arrow_right {
+    visibility: hidden;
   }
   .animals button {
     margin: 20px auto 60px;
